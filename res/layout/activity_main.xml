@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.example.gamecalculator"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlOuter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context=".MainActivity" >
+
+    <ImageButton android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ibSettings"
+        android:background="@drawable/settings_icon"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+    
+    <ScrollView
+        android:id="@+id/svOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlInner" >
+
+        <TextView
+            android:id="@+id/tvOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|right"
+            android:textColor="@android:color/background_light"
+            android:textSize="40sp" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlInner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <ImageView
+        android:id="@+id/ivScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rlInner"
+        android:layout_alignRight="@+id/rlInner"
+        android:src="@drawable/bottom_scrollview_image" 
+        android:background="@android:color/transparent"/>
+
+</RelativeLayout>

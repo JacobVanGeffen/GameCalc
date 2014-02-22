@@ -1,0 +1,10 @@
+<resources>
+   <declare-styleable name="CalcButton">
+       <attr name="buttonType" format="enum">
+           <enum name="constant" value="0"/>
+           <enum name="function" value="1"/>
+           <enum name="digit" value="2"/>
+           <enum name="special" value="3"/>
+           </attr>
+   </declare-styleable>
+</resources>

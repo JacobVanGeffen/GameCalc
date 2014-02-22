@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="outline" type="id"></item>
+    <item name="funct_bar" type="id"></item>
+    <item name="ivAch" type="id"></item>
+    <item name="tvAchName" type="id"></item>
+    <item name="tvAchDesc" type="id"></item>
+    
+    <item name="b0" type="id"></item>
+    <item name="b1" type="id"></item>
+    <item name="b2" type="id"></item>
+    <item name="b3" type="id"></item>
+    <item name="b4" type="id"></item>
+    <item name="b5" type="id"></item>
+    <item name="b6" type="id"></item>
+    <item name="b7" type="id"></item>
+    <item name="b8" type="id"></item>
+    <item name="b9" type="id"></item>
+    
+    <item name="decimal" type="id"></item>
+    
+    <item name="add" type="id"></item>
+    <item name="sub" type="id"></item>
+    <item name="div" type="id"></item>
+    <item name="mult" type="id"></item>
+    <item name="exp" type="id"></item>
+    
+    <item name="equals" type="id"></item>
+    <item name="clear" type="id"></item>
+    <item name="parl" type="id"></item>
+    <item name="parr" type="id"></item>
+    <item name="del" type="id"></item>
+    <item name="neg" type="id"></item>
+    <item name="sign" type="id"></item>
+    <item name="left" type="id"></item>
+    <item name="right" type="id"></item>
+    
+    <item name="fact" type="id"></item>
+    <item name="sqrt" type="id"></item>
+    
+    <item name="pi" type="id"></item>
+    <item name="e" type="id"></item>
+    <item name="tau" type="id"></item>
+    
+    <item name="sin" type="id"></item>
+    <item name="cos" type="id"></item>
+    <item name="tan" type="id"></item>
+    <item name="cot" type="id"></item>
+   	<item name="sec" type="id"></item>
+   	<item name="csc" type="id"></item>
+    
+    <item name="ln" type="id"></item>
+    <item name="log" type="id"></item>
+    <item name="nCr" type="id"></item>
+    <item name="nPr" type="id"></item>
+    <item name="abs" type="id"></item>
+    	
+   	<item name="integral" type="id"></item>
+        
+</resources>

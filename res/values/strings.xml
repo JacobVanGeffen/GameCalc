@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Game Caclulator</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="rules">How To Play:\n
+        \tUnlock numbers and functions by deriving them!\n
+        \tDON\'T CHEAT (unless you really want to).</string>
+    
+</resources>
