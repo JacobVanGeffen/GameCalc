@@ -13,12 +13,13 @@ public class UnlockParser {
 	private static HashMap<String,String> regexes = new HashMap<String,String>();
 	private static HashMap<String,String> anses = new HashMap<String,String>();
 		
+	//** negative = -, subtract = \\-
 	//if one regex unlocks multiple buttons, seperate button titles w/ a comma (,)
 	static{
 		regexes.put("\\d+\\D+\\d+\\D+\\d+", "(,)");
 		regexes.put("((\\d+)\\+(\\2))(\\+\\2)*", "*"); // mult
 		regexes.put("((\\d+)\\*(\\2))(\\*\\2)*", "^"); // exp
-		regexes.put("(\\d+)\\^\\-\\d+", "/"); // div
+		regexes.put("(\\d+)\\^-\\d+", "/"); // div
 		regexes.put("1/cos", "sec");
 		regexes.put("1/tan", "cot");
 		regexes.put("1/sin", "csc");
@@ -33,7 +34,7 @@ public class UnlockParser {
 		regexes.put("(\\d+)\\/((√\\(\\1\\^2\\+\\d+\\^2\\))|(√\\(\\d+\\^2\\+\\1\\^2\\)))", "sin,cos");
 		regexes.put("(\\d+)!\\/(\\(\\1\\-\\d+\\)!)", "nPr");
 		regexes.put("√\\(\\-?\\d+\\^2\\)", "abs");
-		regexes.put("(\\d+)!\\/(\\(\\(\\1\\*(\\d+)\\)!\\2\\))", "nCr");
+		regexes.put("(\\d+)!\\/(\\(\\(\\1\\-(\\d+)\\)!\\2\\))", "nCr");
 		regexes.put("(\\d+)!\\/(\\((\\d+)!\\*\\(\\1\\-\\3\\)!\\))", "nCr");
 		anses.put("\\d+\\.\\d+", ".,/"); // decimal
 		anses.put("3\\.1415\\d*", "π"); // pi
@@ -79,7 +80,7 @@ public class UnlockParser {
 	// e.g. allows √((-5)^2) to unlock absolute value
 	private static String addAmbPar(String regex){
 		String ret = regex.replaceAll(
-				"((\\\\)?\\-\\?)?(\\\\)?[0-9a-zπτ.]+(\\\\\\.[0-9]+)?[+*?]?",
+				"((?<!\\\\)(-\\??))?(\\\\)?[0-9a-zπτ.]+(\\\\\\.[0-9]+)?[+*?]?",
 				"\\\\\\(*$0\\\\\\)*");
 		Log.wtf("SAFDASF", ret);
 		return ret;
